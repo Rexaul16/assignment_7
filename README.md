@@ -27,6 +27,9 @@ Write a short program, called demo_set.cxx that does the following:
   2.For these two sets a and b the program then outputs (a *union* b) *intersection* {1,3,5,7,9,15,22,25,30} 
     as well as the cardinality of that set. 
     
-set.h - the header file for the set class
-set.cxx - the implementation for the set class
-demo_set.cxx
+
+set.h - the header file for the set class.
+
+set.cxx - the implementation for the set class.
+
+demo_set.cxx. 
