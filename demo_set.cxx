@@ -142,7 +142,52 @@ bool test_cardinality_when_not_empty() {
 }
 
 #else
+void set_add(Set& x,unsigned int n){
+  while(n > 0 && n <= 30){
+    x.add(n);
+
+    cin>> n;
+  }
+  // x.print_set();                                                             
+
+}
+
+void initialize_c(Set& c){
+  c.add(1);
+  c.add(3);
+  c.add(5);
+  c.add(7);
+  c.add(9);
+  c.add(15);
+  c.add(22);
+  c.add(25);
+  c.add(30);
+}
+
 int run_demo() {
+	Set a;
+  Set b;
+  Set c;
+  ostringstream output;
+  initialize_c(c);
+  unsigned int n;
+  cout << "Type in the integers in your set.\n";
+  cout << "Type a negative number when you are done.\n";
+  cin >> n;
+  set_add(a,n);	
+  cout << "Type in the integers for set b\n";
+  cin >> n;
+  set_add(b,n);
+  a.onion(b);
+  cout << "(a union b) is: ";
+  a.print_set();
+  cout << endl;
+  a.intersection(c);
+  cout << "(a union b) intersection {1,3,5,7,9,15,22,25,30} is: ";
+  a.print_set();
+  cout << endl;
+  cout << "The cardinality is: " << a.cardinality();
+  cout << endl;
 	return 0;
 }
 #endif
